@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:padding="16dp"
+        android:orientation="vertical"
+        android:layout_height="match_parent"
+        tools:context=".activity.IpApiActivity">
+
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="horizontal">
+
+        <TextView android:layout_width="wrap_content"
+                  android:text="As"
+                  android:ems="6"
+                  android:textStyle="bold"
+                  android:textSize="14sp"
+                  android:layout_height="wrap_content"/>
+
+        <TextView
+                android:textSize="12sp"
+                android:id="@+id/tv_as"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+
+    </LinearLayout>
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_marginTop="5dp"
+                  android:layout_height="wrap_content"
+                  android:orientation="horizontal">
+
+        <TextView android:layout_width="wrap_content"
+                  android:text="City"
+                  android:textStyle="bold"
+                  android:ems="6"
+                  android:textSize="14sp"
+                  android:layout_height="wrap_content"/>
+
+        <TextView
+                android:textSize="12sp"
+                android:id="@+id/tv_city"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+
+    </LinearLayout>
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginTop="5dp"
+                  android:orientation="horizontal">
+
+        <TextView android:layout_width="wrap_content"
+                  android:text="Country"
+                  android:textStyle="bold"
+                  android:ems="6"
+                  android:textSize="14sp"
+                  android:layout_height="wrap_content"/>
+
+        <TextView
+                android:textSize="12sp"
+                android:id="@+id/tv_country"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+
+    </LinearLayout>
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginTop="5dp"
+                  android:orientation="horizontal">
+
+        <TextView android:layout_width="wrap_content"
+                  android:textStyle="bold"
+                  android:text="Country Code "
+                  android:ems="6"
+
+                  android:textSize="14sp"
+                  android:layout_height="wrap_content"/>
+
+        <TextView
+                android:textSize="12sp"
+                android:id="@+id/tv_country_code"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+
+    </LinearLayout>
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginTop="5dp"
+                  android:orientation="horizontal">
+
+        <TextView android:layout_width="wrap_content"
+                  android:text="ISP"
+                  android:ems="6"
+                  android:textStyle="bold"
+                  android:textSize="14sp"
+                  android:layout_height="wrap_content"/>
+
+        <TextView
+                android:textSize="12sp"
+                android:id="@+id/tv_isp"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+
+    </LinearLayout>
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginTop="5dp"
+                  android:orientation="horizontal">
+
+        <TextView android:layout_width="wrap_content"
+                  android:text="Latitude "
+                  android:ems="6"
+                  android:textStyle="bold"
+                  android:textSize="14sp"
+                  android:layout_height="wrap_content"/>
+
+        <TextView
+                android:textSize="12sp"
+                android:id="@+id/tv_lat"
+                android:singleLine="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+
+    </LinearLayout>
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_marginTop="5dp"
+                  android:layout_height="wrap_content"
+                  android:orientation="horizontal">
+
+        <TextView android:layout_width="wrap_content"
+                  android:text="Longtitude "
+                  android:ems="6"
+                  android:textStyle="bold"
+                  android:textSize="14sp"
+                  android:layout_height="wrap_content"/>
+
+        <TextView
+                android:textSize="12sp"
+                android:id="@+id/tv_longti"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+
+    </LinearLayout>
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginTop="5dp"
+                  android:orientation="horizontal">
+
+        <TextView android:layout_width="wrap_content"
+                  android:text="Org "
+                  android:ems="6"
+                  android:textStyle="bold"
+                  android:textSize="14sp"
+                  android:layout_height="wrap_content"/>
+
+        <TextView
+                android:textSize="12sp"
+                android:id="@+id/tv_org"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+
+    </LinearLayout>
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginTop="5dp"
+                  android:orientation="horizontal">
+
+        <TextView android:layout_width="wrap_content"
+                  android:text="Query"
+                  android:ems="6"
+                  android:textStyle="bold"
+                  android:textSize="14sp"
+                  android:layout_height="wrap_content"/>
+
+        <TextView
+                android:textSize="12sp"
+                android:id="@+id/tv_query"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+
+    </LinearLayout>
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_marginTop="5dp"
+                  android:layout_height="wrap_content"
+                  android:orientation="horizontal">
+
+        <TextView android:layout_width="wrap_content"
+                  android:text="Region"
+                  android:ems="6"
+                  android:textStyle="bold"
+                  android:textSize="14sp"
+                  android:layout_height="wrap_content"/>
+
+        <TextView
+                android:textSize="12sp"
+                android:id="@+id/tv_region"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+
+    </LinearLayout>
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginTop="5dp"
+                  android:orientation="horizontal">
+
+        <TextView android:layout_width="wrap_content"
+                  android:text="Region Name"
+                  android:ems="6"
+                  android:textStyle="bold"
+                  android:textSize="14sp"
+
+                  android:layout_height="wrap_content"/>
+
+        <TextView
+                android:textSize="12sp"
+                android:id="@+id/tv_region_name"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+
+    </LinearLayout>
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginTop="5dp"
+                  android:orientation="horizontal">
+
+        <TextView android:layout_width="wrap_content"
+                  android:text="Status"
+                  android:ems="6"
+                  android:textStyle="bold"
+                  android:textSize="14sp"
+                  android:layout_height="wrap_content"/>
+
+        <TextView
+                android:textSize="12sp"
+                android:id="@+id/tv_status"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+
+    </LinearLayout>
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginTop="5dp"
+                  android:orientation="horizontal">
+
+        <TextView android:layout_width="wrap_content"
+                  android:text="TimeZone"
+                  android:ems="6"
+                  android:textStyle="bold"
+                  android:textSize="14sp"
+                  android:layout_height="wrap_content"/>
+
+        <TextView
+                android:textSize="12sp"
+                android:id="@+id/tv_timezone"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+
+    </LinearLayout>
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_marginTop="5dp"
+                  android:layout_height="wrap_content"
+                  android:orientation="horizontal">
+
+        <TextView android:layout_width="wrap_content"
+                  android:text="Zip "
+                  android:ems="6"
+                  android:textStyle="bold"
+                  android:textSize="14sp"
+                  android:layout_height="wrap_content"/>
+
+        <TextView
+                android:textSize="12sp"
+                android:id="@+id/tv_zip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

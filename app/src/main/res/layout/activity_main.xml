@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_height="match_parent" android:layout_width="match_parent">
+    <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="wrap_content"
+            android:orientation="vertical"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            tools:context=".activity.MainActivity">
+
+
+        <Button android:id="@+id/btn_ipapi"
+                android:layout_marginTop="15dp"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:textAllCaps="false"
+                android:text="ip-api.com"/>
+        <Button android:id="@+id/btn_ipinfo"
+                android:layout_width="150dp"
+                android:textAllCaps="false"
+                android:layout_marginTop="15dp"
+                android:layout_height="wrap_content"
+                android:text="ipinfo.io"/>
+
+
+    </LinearLayout>
+</RelativeLayout>
