@@ -9,7 +9,7 @@ import java.util.concurrent.TimeUnit
 class RetrofitUtils {
 
 
-    fun RetrofitApiInterface() {
+    fun  RetrofitApiInterface() {
 
         val interceptor = HttpLoggingInterceptor()
         interceptor.setLevel(HttpLoggingInterceptor.Level.BODY)
@@ -18,9 +18,7 @@ class RetrofitUtils {
             .readTimeout(3, TimeUnit.MINUTES)
             .writeTimeout(3, TimeUnit.MINUTES).build()
 
-        val retrofit =
-            Retrofit.Builder().baseUrl("http://www.ip-api.com/json ").addConverterFactory(GsonConverterFactory.create())
-                .client(client).build()
+        val retrofit =Retrofit.Builder().baseUrl("http://www.ip-api.com/json ").addConverterFactory(GsonConverterFactory.create()).client(client).build()
 
     }
 

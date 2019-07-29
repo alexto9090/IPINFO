@@ -1,7 +1,7 @@
 package com.creativeinfoway.ipinfo.activity
 
-import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
+import android.os.Bundle
 import android.widget.TextView
 import com.creativeinfoway.ipinfo.R
 
@@ -12,9 +12,7 @@ class IpInfoActivity : AppCompatActivity() {
         setContentView(R.layout.activity_ip_info)
 
         initIDs()
-
         parseIpinfo()
-
     }
 
     private fun initIDs() {

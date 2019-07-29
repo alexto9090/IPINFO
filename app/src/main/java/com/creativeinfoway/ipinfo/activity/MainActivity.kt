@@ -9,25 +9,33 @@ import android.widget.Button
 import android.widget.Toast
 import com.creativeinfoway.ipinfo.R
 
+import com.creativeinfoway.ipinfo.model.GeoService
+import okhttp3.OkHttpClient
+import okhttp3.ResponseBody
+import okhttp3.logging.HttpLoggingInterceptor
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
+import retrofit2.Retrofit
+import retrofit2.converter.gson.GsonConverterFactory
+import java.util.concurrent.TimeUnit
 
-import com.nitesh.ipinfo.lib.GeoServices
+
+
 
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
 
-
     private var btnIpApi: Button? = null
     private var btnIpInfo: Button? = null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
         initId()
-
     }
 
     private fun initId() {
-
         btnIpApi = findViewById(com.creativeinfoway.ipinfo.R.id.btn_ipapi)
         btnIpInfo = findViewById(com.creativeinfoway.ipinfo.R.id.btn_ipinfo)
 
@@ -36,30 +44,25 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     override fun onClick(v: View?) {
-
         when (v!!.id) {
             R.id.btn_ipapi -> {
-                GeoServices.instance.getGeoIp { info, error ->
+                GeoService.instance.getGeoIp { info, error ->
                     if (info != null) {
                         val intent = Intent(applicationContext, IpApiActivity::class.java)
-                        intent.putExtra("geoInfo", info)
+                        intent.putExtra("geoInfo",info)
                         startActivity(intent)
                     }
-                    if (error != null) {
-                        showToast(error!!)
-                    }
+                    if (error != null) { showToast(error!!) }
                 }
             }
             R.id.btn_ipinfo -> {
-                GeoServices.instance.getGeoDetails { details, error ->
+                GeoService.instance.getGeoDetails { details, error ->
                     if (details != null) {
                         val intent = Intent(applicationContext, IpInfoActivity::class.java)
-                        intent.putExtra("geoDetails", details)
+                        intent.putExtra("geoDetails",details)
                         startActivity(intent)
                     }
-                    if (error != null) {
-                        showToast(error!!)
-                    }
+                    if (error != null) { showToast(error!!) }
                 }
             }
         }

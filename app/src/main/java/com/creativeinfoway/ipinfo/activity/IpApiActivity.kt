@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity
 import android.widget.TextView
 import com.creativeinfoway.ipinfo.R
 import com.creativeinfoway.ipinfo.model.GeoInfo
+import org.json.JSONObject
 
 class IpApiActivity : AppCompatActivity() {
 
