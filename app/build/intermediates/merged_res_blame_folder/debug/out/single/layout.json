@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "E:\\library\\ipinfo\\ipinfo\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_ip_info.xml",
+        "source": "E:\\library\\ipinfo\\ipinfo\\app\\src\\main\\res\\layout\\activity_ip_info.xml"
+    },
+    {
+        "merged": "E:\\library\\ipinfo\\ipinfo\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_ip_api.xml",
+        "source": "E:\\library\\ipinfo\\ipinfo\\app\\src\\main\\res\\layout\\activity_ip_api.xml"
+    },
+    {
+        "merged": "E:\\library\\ipinfo\\ipinfo\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_main.xml",
+        "source": "E:\\library\\ipinfo\\ipinfo\\app\\src\\main\\res\\layout\\activity_main.xml"
+    }
+]

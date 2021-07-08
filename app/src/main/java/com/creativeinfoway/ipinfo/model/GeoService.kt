@@ -13,8 +13,7 @@ import retrofit2.http.GET
 import java.io.Serializable
 import java.util.concurrent.TimeUnit
 
-
-public class GeoService {
+class GeoService {
 
     //Singleton Object
     companion object {
@@ -22,28 +21,29 @@ public class GeoService {
     }
 
     //Lazy Variables
-    private val httpClient: OkHttpClient get() {
-        val interceptor = HttpLoggingInterceptor()
-        interceptor.setLevel(HttpLoggingInterceptor.Level.BODY)
+    private val httpClient: OkHttpClient by lazy {
 
-        return OkHttpClient.Builder().addInterceptor(interceptor).connectTimeout(3, TimeUnit.MINUTES)
+        val interceptor = HttpLoggingInterceptor()
+        interceptor.level = HttpLoggingInterceptor.Level.BODY
+
+        OkHttpClient.Builder().addInterceptor(interceptor).connectTimeout(3, TimeUnit.MINUTES)
             .readTimeout(3, TimeUnit.MINUTES)
             .writeTimeout(3, TimeUnit.MINUTES).build()
     }
 
-    private val geoInfoBuilder: Call<GeoInfo> get() {
+    private val geoInfoBuilder: Call<GeoInfo> by lazy {
         val retrofit = Retrofit.Builder().baseUrl("http://www.ip-api.com/json/")
             .addConverterFactory(GsonConverterFactory.create()).client(httpClient).build()
         val retrofitApiInterface = retrofit.create(GeoInterface::class.java)
-        return retrofitApiInterface.geoInfo()
+        retrofitApiInterface.geoInfo()
     }
 
 
-    private val geoDetailsBuilder: Call<ResponseBody> get() {
+    private val geoDetailsBuilder: Call<ResponseBody> by lazy {
         val retrofit = Retrofit.Builder().baseUrl("https://ipinfo.io/org/")
             .addConverterFactory(GsonConverterFactory.create()).client(httpClient).build()
         val retrofitApiInterface = retrofit.create(GeoInterface::class.java)
-        return retrofitApiInterface.geoDetails()
+        retrofitApiInterface.geoDetails()
     }
 
 
@@ -89,23 +89,20 @@ interface GeoInterface {
     fun geoDetails():Call<ResponseBody>
 }
 
-
-
-
 class GeoInfo: Serializable {
 
-    @SerializedName("as") public var asType : String? = null
-    @SerializedName("city") public var city: String? = null
-    @SerializedName("country") public var country: String? = null
-    @SerializedName("countryCode") public var countryCode: String? = null
-    @SerializedName("isp") public var isp: String? = null
-    @SerializedName("lat") public var lat: Double? = null
-    @SerializedName("lon") public var lon: Double? = null
-    @SerializedName("org") public var org: String? = null
-    @SerializedName("query") public var query: String? = null
-    @SerializedName("region") public var region: String? = null
-    @SerializedName("regionName") public var regionName: String? = null
-    @SerializedName("status") public var status: String? = null
-    @SerializedName("timezone") public var timezone: String? = null
-    @SerializedName("zip") public var zip: String? = null
+    @SerializedName("as") var asType : String? = null
+    @SerializedName("city") var city: String? = null
+    @SerializedName("country") var country: String? = null
+    @SerializedName("countryCode") var countryCode: String? = null
+    @SerializedName("isp") var isp: String? = null
+    @SerializedName("lat") var lat: Double? = null
+    @SerializedName("lon") var lon: Double? = null
+    @SerializedName("org") var org: String? = null
+    @SerializedName("query") var query: String? = null
+    @SerializedName("region") var region: String? = null
+    @SerializedName("regionName") var regionName: String? = null
+    @SerializedName("status") var status: String? = null
+    @SerializedName("timezone") var timezone: String? = null
+    @SerializedName("zip") var zip: String? = null
 }

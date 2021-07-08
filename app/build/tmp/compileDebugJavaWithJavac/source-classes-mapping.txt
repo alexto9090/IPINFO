@@ -1,0 +1,8 @@
+com/creativeinfoway/ipinfo/databinding/ActivityIpApiBinding.java
+ com.creativeinfoway.ipinfo.databinding.ActivityIpApiBinding
+com/creativeinfoway/ipinfo/BuildConfig.java
+ com.creativeinfoway.ipinfo.BuildConfig
+com/creativeinfoway/ipinfo/databinding/ActivityIpInfoBinding.java
+ com.creativeinfoway.ipinfo.databinding.ActivityIpInfoBinding
+com/creativeinfoway/ipinfo/databinding/ActivityMainBinding.java
+ com.creativeinfoway.ipinfo.databinding.ActivityMainBinding

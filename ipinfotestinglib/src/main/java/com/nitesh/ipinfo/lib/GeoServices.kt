@@ -13,8 +13,7 @@ import retrofit2.http.GET
 import java.io.Serializable
 import java.util.concurrent.TimeUnit
 
-
-public class GeoServices {
+class GeoServices {
 
     //Singleton Object
     companion object {
@@ -92,31 +91,31 @@ interface GeoInterface {
 class GeoInfo : Serializable {
 
     @SerializedName("as")
-    public var asType: String? = null
+    var asType: String? = null
     @SerializedName("city")
-    public var city: String? = null
+    var city: String? = null
     @SerializedName("country")
-    public var country: String? = null
+    var country: String? = null
     @SerializedName("countryCode")
-    public var countryCode: String? = null
+    var countryCode: String? = null
     @SerializedName("isp")
-    public var isp: String? = null
+    var isp: String? = null
     @SerializedName("lat")
-    public var lat: Double? = null
+    var lat: Double? = null
     @SerializedName("lon")
-    public var lon: Double? = null
+    var lon: Double? = null
     @SerializedName("org")
-    public var org: String? = null
+    var org: String? = null
     @SerializedName("query")
-    public var query: String? = null
+    var query: String? = null
     @SerializedName("region")
-    public var region: String? = null
+    var region: String? = null
     @SerializedName("regionName")
-    public var regionName: String? = null
+    var regionName: String? = null
     @SerializedName("status")
-    public var status: String? = null
+    var status: String? = null
     @SerializedName("timezone")
-    public var timezone: String? = null
+    var timezone: String? = null
     @SerializedName("zip")
-    public var zip: String? = null
+    var zip: String? = null
 }

@@ -1,26 +1,23 @@
 package com.creativeinfoway.ipinfo.activity
 
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.TextView
-import com.creativeinfoway.ipinfo.R
+import com.creativeinfoway.ipinfo.databinding.ActivityIpInfoBinding
 
 class IpInfoActivity : AppCompatActivity() {
-    private var tvInfo: TextView? = null
+    private lateinit var binding: ActivityIpInfoBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_ip_info)
-
-        initIDs()
-        parseIpinfo()
+        binding = ActivityIpInfoBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+        parseIpInfo()
     }
 
-    private fun initIDs() {
-        tvInfo = findViewById(R.id.tv_ipinfo)
-    }
-
-    fun parseIpinfo() {
-        val apidata = intent.getStringExtra("geoDetails")
-        tvInfo!!.setText(apidata)
+    private fun parseIpInfo() {
+        with(binding) {
+            val apiData = intent.getStringExtra("geoDetails")
+            tvIpinfo.text = apiData
+        }
     }
 }
